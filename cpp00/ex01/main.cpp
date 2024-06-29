@@ -25,12 +25,10 @@ int main()
         else if (cincommand == rehber.commands[1])
         {
                 rehber.searchPerson();
-                //std::cin.ignore();
         }
         else
         {
             std::cout << "invalid command" << std::endl;
         }
     }
-    //std::cin.clear();
 }
