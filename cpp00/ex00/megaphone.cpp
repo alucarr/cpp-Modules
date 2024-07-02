@@ -9,9 +9,7 @@ int main(int ac, char **av)
             for (int j = 0; av[i][j]; j++)
             {
                 if (av[i][j] >= 'a' && av[i][j] <= 'z')
-                {
                    av[i][j] = toupper(av[i][j]);
-                }
             }
             std::cout << av[i] << " ";
         }

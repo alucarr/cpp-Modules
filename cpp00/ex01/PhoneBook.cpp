@@ -59,15 +59,15 @@ void PhoneBook::searchPerson()
 			  << "Nickname" << "|" << std::endl;
 	for (size_t i = 0; i < 8; i++)
 	{
-		std::cout << std::right << std::setw(10) << i << "|" << std::setw(10);
+		std::cout << std::right << std::setw(10) << i << "|";
 		for (size_t j = 0; j < 3; j++)
 		{
 			if (contacts[i].getString(j).length() > 10)
 			{
-				std::cout << contacts[i].getString(j).substr(0,9) << ".|";
+				std::cout << std::left << std::setw(9) << contacts[i].getString(j).substr(0,9) << ".|";
 			}
 			else
-				std::cout << contacts[i].getString(j) << "|";
+				std::cout << std::setw(10) << contacts[i].getString(j) << "|";
 			std::cout << std::setw(10);
 		}
 		std::cout << std::endl;
