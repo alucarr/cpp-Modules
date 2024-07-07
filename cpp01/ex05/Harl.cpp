@@ -32,22 +32,46 @@ void Harl::error()
 }
 void Harl::complain(std::string input)
 {
-    std::map<std::string, Harl::StringFunction> stringActions;
-    stringActions["debug"] = &Harl::debug;
-    stringActions["info"] = &Harl::info;
-    stringActions["warning"] = &Harl::warning;
-    stringActions["error"] = &Harl::error;
-    std::map<std::string, Harl::StringFunction>::iterator it = stringActions.find(input);
-    if (it != stringActions.end()) {
-            (this->*(it->second))();
-        } else {
-            std::cout << "The level not found (delusional)" << std::endl;
-        }
+	std::size_t num = std::string::npos;
+	size_t j = -1;
+	for (size_t i = 0; i < 4; i++)
+	{
+		num = cases[i].compare(input);
+		if (num == 0)
+		{
+			j = i;
+			break;
+		}
+	}
+	switch (j) {
+        case 0:
+            funcPtr = &Harl::debug;
+            break;
+        case 1:
+            funcPtr = &Harl::info;
+            break;
+	    case 2:
+            funcPtr = &Harl::warning;
+            break;
+		case 3:
+            funcPtr = &Harl::error;
+            break;
+        default:
+           std::cerr << "you have entered an unknown level" << std::endl;
+		   return;
+    }
+	if (funcPtr != nullptr)
+        (this->*funcPtr)();
 }
 
-Harl::Harl(/* args */)
-{
 
+Harl::Harl()
+{
+	cases[0]=("DEBUG");
+	cases[1]=("INFO");
+	cases[2]=("WARNING");
+	cases[3]=("ERROR");
+	return;
 }
 
 Harl::~Harl()

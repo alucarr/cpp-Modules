@@ -14,14 +14,15 @@
 class Harl
 {
 private:
-    typedef void (Harl::*StringFunction)();
+    void (Harl::*funcPtr)();
     void debug( void );
     void info( void );
     void warning( void );
     void error( void );
 public:
-    Harl(/* args */);
+    Harl();
     void complain( std::string level );
+    std::string cases[4];
     ~Harl();
 };
 
