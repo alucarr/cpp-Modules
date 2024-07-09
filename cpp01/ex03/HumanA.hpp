@@ -8,7 +8,7 @@ private:
     Weapon* weapon;
     std::string name;
 public:
-    HumanA(/* args */);
+    HumanA();
     HumanA(std::string name, Weapon& weapon);
     void attack();
     ~HumanA();

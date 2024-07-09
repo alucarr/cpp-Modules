@@ -23,16 +23,25 @@ int main()
     std::cout << "Enter the string you want to replace with: ";
     getline(std::cin, replaced);
     size_t position = allstring.find(text);
-    if (position != std::string::npos)
+    if(text != "")
     {
-        allstring.erase(position, text.length());
-        allstring.insert(position, replaced);
+        if (position != std::string::npos)
+        {
+            allstring.erase(position, text.length());
+            allstring.insert(position, replaced);
+        }
+        else
+        {
+            std::cerr << "The string not found." << std::endl;
+            myFile.close();
+            return 1;
+        }
     }
     else
     {
-        std::cerr << "The string not found." << std::endl;
-        myFile.close();
-        return 1;
+            std::cerr << "The string not found." << std::endl;
+            myFile.close();
+            return 1;
     }
     std::ofstream newFile("Replaced.txt");
     if (!newFile.is_open())

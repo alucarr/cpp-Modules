@@ -11,7 +11,7 @@ void HumanB::attack()
     
 }
 
-HumanB::HumanB(/* args */)
+HumanB::HumanB()
 {
 }
 
