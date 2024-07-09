@@ -46,6 +46,5 @@ int main()
     file.close();
     newFile.close();
     std::cout << "Completed." << std::endl;
-    
     return 0;
 }

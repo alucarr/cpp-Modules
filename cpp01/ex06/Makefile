@@ -1,13 +1,16 @@
 NAME = harl
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror -fsanitize=address -g
-SRCS = main.cpp Harl.cpp
+SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS)

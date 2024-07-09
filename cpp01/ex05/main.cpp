@@ -1,11 +1,16 @@
 #include "Harl.hpp"
-int main(int ac, char **av)
+int main()
 {
     Harl bot;
  
     std::string level;
-	std::cout << "enter a level:";
-	std::cin >> level;
+    while (1)
+    {
+        std::cout << "enter a level:";
+        getline(std::cin, level);
+        if (level != "")
+            break;  
+    }
     bot.complain(level);
 
     return 0;

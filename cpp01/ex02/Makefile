@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = program
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror -fsanitize=address -g
 SRCS = $(wildcard *.cpp)
