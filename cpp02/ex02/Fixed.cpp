@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed(/* args */)
+Fixed::Fixed()
 {
     fixedValue = 0;
 }
