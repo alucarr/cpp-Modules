@@ -147,4 +147,5 @@ int Fixed::toInt( void ) const
 
 Fixed::~Fixed()
 {
+    
 }
