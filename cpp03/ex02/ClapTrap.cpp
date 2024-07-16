@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 12:59:56 by alucar            #+#    #+#             */
+/*   Updated: 2024/07/15 12:59:58 by alucar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 void ClapTrap::attack(const std::string& target)
@@ -50,7 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     }
 }
 
-ClapTrap::ClapTrap(/* args */)
+ClapTrap::ClapTrap()
 {
     std::cout << "constructor of claptrap" << std::endl;
     this->name = "Default";

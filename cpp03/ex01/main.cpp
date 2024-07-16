@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 12:46:13 by alucar            #+#    #+#             */
+/*   Updated: 2024/07/15 12:46:46 by alucar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
     ScavTrap ali("ali");
     ScavTrap mustafa("mustafa");
@@ -15,4 +27,6 @@ int main(int argc, char const *argv[])
     ali.guardGate();
     mustafa.guardGate();
     std::cout << "------------- THE END -------------" << std::endl;
+    
+    return 0;
 }

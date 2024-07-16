@@ -1,14 +1,12 @@
-#include "ClapTrap.hpp"
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbay <hbay@student.42istanbul.com.tr>      +#+  +:+       +#+        */
+/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/24 10:57:03 by hbay              #+#    #+#             */
-/*   Updated: 2024/05/24 10:57:03 by hbay             ###   ########.fr       */
+/*   Created: 2024/07/15 13:00:32 by alucar            #+#    #+#             */
+/*   Updated: 2024/07/15 13:00:33 by alucar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +14,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
     FragTrap ali("ali");
     FragTrap mustafa("mustafa");
@@ -30,4 +28,6 @@ int main(int argc, char const *argv[])
     ali.highFivesGuys();
     mustafa.highFivesGuys();
     std::cout << "------------- THE END -------------" << std::endl;
+
+    return 0;
 }
