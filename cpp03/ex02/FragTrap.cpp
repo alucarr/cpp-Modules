@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/15 12:59:47 by alucar            #+#    #+#             */
-/*   Updated: 2024/07/15 12:59:49 by alucar           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(/* args */)
 {
     std::cout << "constructor of FragTrap" << std::endl;
     name = "Default FragTrap";
@@ -38,17 +26,4 @@ void FragTrap::highFivesGuys()
 FragTrap::~FragTrap()
 {
     std::cout << "Destructor of FragTrap" << std::endl;
-}
-
-FragTrap & FragTrap::operator=(const FragTrap & other)
-{
-    this->name = other.name;
-	this->hitPts = other.hitPts;
-	this->energyPts = other.energyPts;
-	this->attackDmg = other.attackDmg;
-    return *this;
-}
-
-FragTrap::FragTrap(const FragTrap &cpy) {
-    *this = cpy;
 }

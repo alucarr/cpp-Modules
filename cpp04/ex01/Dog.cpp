@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 13:19:16 by alucar            #+#    #+#             */
-/*   Updated: 2024/07/16 13:19:18 by alucar           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Dog.hpp"
 
 Dog::Dog()
@@ -36,7 +24,6 @@ Dog::Dog(const Dog &cpy) {
 
 Dog &Dog::operator=(const Dog &other) {
     this->type = other.type;
-    return *this;
     this->dogBrain = new Brain();
 	if (this->dogBrain == NULL)
 	{

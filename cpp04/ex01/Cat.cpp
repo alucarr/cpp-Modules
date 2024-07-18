@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 13:19:12 by alucar            #+#    #+#             */
-/*   Updated: 2024/07/16 13:19:13 by alucar           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Cat.hpp"
 #include "Brain.hpp"
 
@@ -37,7 +25,6 @@ Cat::Cat(const Cat &cpy) {
 
 Cat &Cat::operator=(const Cat &other) {
     this->type = other.type;
-    return *this;
     this->catBrain = new Brain();
 	if (this->catBrain == NULL)
 	{

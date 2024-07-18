@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: alucar <alucar@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/15 13:14:08 by alucar            #+#    #+#             */
-/*   Updated: 2024/07/15 13:14:23 by alucar           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(/* args */)
 {
     this->attackDmg = 20;
     this->energyPts = 50;
@@ -38,17 +26,4 @@ void ScavTrap::guardGate()
 ScavTrap::~ScavTrap()
 {
     std::cout << "Destructor of ScavTrap" << std::endl;
-}
-
-ScavTrap & ScavTrap::operator=(const ScavTrap & other)
-{
-    this->name = other.name;
-	this->hitPts = other.hitPts;
-	this->energyPts = other.energyPts;
-	this->attackDmg = other.attackDmg;
-    return *this;
-}
-
-ScavTrap::ScavTrap(const ScavTrap &cpy) {
-    *this = cpy;
 }
